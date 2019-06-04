@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  mistral:
+    build: ./
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend
+  cypress:
+    image: "cypress/included:3.3.1"
+    depends_on:
+      - mistral
+    environment:
+      - CYPRESS_baseUrl=http://mistral:3000
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    networks:
+      - frontend
+
+networks:
+  frontend:

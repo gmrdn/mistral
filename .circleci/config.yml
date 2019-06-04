@@ -36,3 +36,44 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+  integration:
+    machine: true
+    steps:
+     - checkout
+    #  - run:
+    #      #need to login so we can pull private repos from hub in the following runs
+    #      name: Login 
+    #      command: docker login -u $DOCKERHUB_USER -e $DOCKERHUB_EMAIL -p $DOCKERHUB_PASSWORD
+     - run:
+         name: Serve
+         command: docker-compose up -d mistral
+     - run:
+         name: Test
+         command: docker-compose run cypress
+  #    - run:
+  #        name: Collect artifacts
+  #        command: |
+  #          docker cp app_cypress_run_1:/app/cypress/artifacts $(pwd)/cypress/artifacts
+  #        when: always #execute this run command on success or failure of previous run
+  #    - store_test_results:
+  # #expose test results so you can see failing tests on the top of the page
+  #        path: cypress/artifacts
+  #        when: always
+  #    - store_artifacts:
+  # #expose video and screenshots from cypress
+  #        path: cypress/artifacts
+  #        when: always
+  #    - run:
+  #        name: Deploy
+  #        command: |
+  # # deployment is out of scope of this article
+
+workflows:
+  version: 2
+  build_and_integrate:
+    jobs:
+      - build
+      - integration:
+          requires:
+            - build
