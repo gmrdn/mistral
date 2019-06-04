@@ -24,9 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className='button__container'>
-        <button className='button' onClick={this.handleClick}>Click Me</button>
-        <p>{this.state.wind_speed}</p>
-        <p>{this.state.wind_deg}</p>
+        <button id='btn_forecast' className='button' onClick={this.handleClick}>Forecast</button>
+        <p id='speed_today'>{this.state.wind_speed}</p>
+        <p id='deg_today'>{this.state.wind_deg}</p>
       </div>
     )
   }
