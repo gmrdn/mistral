@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Affichage page principale should match snapshot 1`] = `
+<div>
+  <div
+    class="button__container"
+  >
+    <button
+      class="button"
+      id="btn_forecast"
+    >
+      Forecast
+    </button>
+    <p
+      id="speed_today"
+    />
+    <p
+      id="deg_today"
+    />
+  </div>
+</div>
+`;

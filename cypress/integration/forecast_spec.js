@@ -15,6 +15,6 @@ context('Forecast', () => {
 
   it('should display today\'s wind direction', () => {
     cy.get('#deg_today')
-    .should('contain', '137.603');
+      .should('contain', '137.603');
   })
 })
