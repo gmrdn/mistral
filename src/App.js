@@ -44,13 +44,14 @@ function App() {
     <div className="jumbotron jumbotron-fluid">
       <div className="container">      
         <div className="card" style={{"width" : "18rem"}}>
+          <h5 class="card-header">Aix en Provence</h5>
           <div className="card-body">
             <h5 className="card-title" id='is_mistral'>{mistral ? "Y'a du mistral" : "Y'a pas de mistral"}</h5>
             <p className="card-text" id='deg_today'>{windDirection} degrés</p>
             <h5 className="card-title" id='is_strong'>{strong ? "Ca souffle fort" : "Ca souffle pas fort"}</h5>
             <p className="card-text" id='speed_today'>{windSpeed} km/h</p>
+            <button id='btn_forecast' className="btn btn-primary" onClick={() => getForecast()}>Forecast</button>
           </div>
-          <button id='btn_forecast' className="btn btn-primary" onClick={() => getForecast()}>Forecast</button>
         </div>
       </div>
     </div> 
