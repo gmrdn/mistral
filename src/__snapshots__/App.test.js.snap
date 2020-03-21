@@ -2,21 +2,25 @@
 
 exports[`Affichage page principale should match snapshot 1`] = `
 <div>
-  <div
-    class="button__container"
-  >
+  <div>
     <button
       class="button"
       id="btn_forecast"
     >
       Forecast
     </button>
-    <p
-      id="speed_today"
-    />
-    <p
-      id="deg_today"
-    />
+    <div>
+      <p
+        id="speed_today"
+      >
+        1
+      </p>
+      <p
+        id="deg_today"
+      >
+        0
+      </p>
+    </div>
   </div>
 </div>
 `;
