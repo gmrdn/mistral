@@ -8,24 +8,38 @@ exports[`Affichage page principale should match snapshot 1`] = `
     <div
       class="container"
     >
-            
       <div
         class="card"
+        style="width: 18rem;"
       >
         <div
           class="card-body"
         >
-          <p
-            class="card-text"
-            id="speed_today"
+          <h5
+            class="card-title"
+            id="is_mistral"
           >
-            1
-          </p>
+            Y'a pas de mistral
+          </h5>
           <p
             class="card-text"
             id="deg_today"
           >
             0
+             degrés
+          </p>
+          <h5
+            class="card-title"
+            id="is_strong"
+          >
+            Ca souffle pas fort
+          </h5>
+          <p
+            class="card-text"
+            id="speed_today"
+          >
+            0
+             km/h
           </p>
         </div>
         <button

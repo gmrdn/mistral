@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestRenderer from 'react-test-renderer';
 import App from './App';
+
 
 describe('Affichage page principale', () => {
   
@@ -16,5 +16,6 @@ describe('Affichage page principale', () => {
     ReactDOM.render(<App />, div);
     expect(div).toMatchSnapshot();
   });
+
 
 });
