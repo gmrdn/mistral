@@ -2,24 +2,39 @@
 
 exports[`Affichage page principale should match snapshot 1`] = `
 <div>
-  <div>
-    <button
-      class="button"
-      id="btn_forecast"
+  <div
+    class="jumbotron jumbotron-fluid"
+  >
+    <div
+      class="container"
     >
-      Forecast
-    </button>
-    <div>
-      <p
-        id="speed_today"
+            
+      <div
+        class="card"
       >
-        1
-      </p>
-      <p
-        id="deg_today"
-      >
-        0
-      </p>
+        <div
+          class="card-body"
+        >
+          <p
+            class="card-text"
+            id="speed_today"
+          >
+            1
+          </p>
+          <p
+            class="card-text"
+            id="deg_today"
+          >
+            0
+          </p>
+        </div>
+        <button
+          class="btn btn-primary"
+          id="btn_forecast"
+        >
+          Forecast
+        </button>
+      </div>
     </div>
   </div>
 </div>
