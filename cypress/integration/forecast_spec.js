@@ -5,7 +5,6 @@ describe('Forecast pas de mistral', () => {
     cy.server();
     cy.route('**/forecast*','fixture:bouchon_aix_pas_mistral.json')
     cy.visit('/')
-    cy.get('#btn_forecast').click();
   })
 
   it('should display today\'s wind speed', () => {
@@ -29,7 +28,6 @@ describe('Forecast avec mistral', () => {
     cy.server();
     cy.route('**/forecast*','fixture:bouchon_aix_mistral.json')
     cy.visit('/')
-    cy.get('#btn_forecast').click();
   })
 
   it('should display today\'s wind speed', () => {

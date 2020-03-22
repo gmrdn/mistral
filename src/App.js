@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
@@ -27,6 +27,10 @@ function App() {
   const [windSpeed, setSpeed] = useState(0);
   const [mistral, setIsMistral] = useState(false);
   const [strong, setIsStrong] = useState(false);
+
+  useEffect(() => {
+    getForecast()
+  })
   
   function getForecast() {
     axios.get('https://api.openweathermap.org/data/2.5/forecast?zip=13100,fr&APPID=f4e38397f380af9bab3b4dc73fab548a')
@@ -50,7 +54,6 @@ function App() {
             <p className="card-text" id='deg_today'>{windDirection} degrés</p>
             <h5 className="card-title" id='is_strong'>{strong ? "Ca souffle fort" : "Ca souffle pas fort"}</h5>
             <p className="card-text" id='speed_today'>{Math.floor(windSpeed * 3600 / 1000)} km/h</p>
-            <button id='btn_forecast' className="btn btn-primary" onClick={() => getForecast()}>Forecast</button>
           </div>
         </div>
       </div>
