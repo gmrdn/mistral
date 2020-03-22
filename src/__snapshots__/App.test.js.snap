@@ -2,53 +2,100 @@
 
 exports[`Affichage page principale should match snapshot 1`] = `
 <div>
+  <h1
+    class="m-3"
+  >
+    Gare au mistral !
+  </h1>
   <div
-    class="jumbotron jumbotron-fluid"
+    class="bg-light p-4"
   >
     <div
       class="container"
     >
       <div
-        class="card"
-        style="width: 18rem;"
+        class="row"
       >
-        <h5
-          class="card-header"
-        >
-          Aix en Provence
-        </h5>
         <div
-          class="card-body"
+          class="col py-md-5"
         >
-          <h5
-            class="card-title"
-            id="is_mistral"
+          <div
+            class="card shadow mx-auto"
+            style="width: 18rem;"
           >
-            Y'a pas de mistral
-          </h5>
-          <p
-            class="card-text"
-            id="deg_today"
+            <h5
+              class="card-header"
+            >
+              Demain
+            </h5>
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+                id="is_mistral"
+              >
+                Y'a pas de mistral
+              </h5>
+              <p
+                class="card-text"
+                id="deg_today"
+              >
+                0
+                 degrés
+              </p>
+              <h5
+                class="card-title"
+                id="is_strong"
+              >
+                Ca souffle pas fort
+              </h5>
+              <p
+                class="card-text"
+                id="speed_today"
+              >
+                0
+                 km/h
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col py-md-5"
+        >
+          <div
+            class="card shadow mx-auto"
+            style="width: 18rem;"
           >
-            0
-             degrés
-          </p>
-          <h5
-            class="card-title"
-            id="is_strong"
-          >
-            Ca souffle pas fort
-          </h5>
-          <p
-            class="card-text"
-            id="speed_today"
-          >
-            0
-             km/h
-          </p>
+            <h5
+              class="card-header"
+            >
+              Prochain Mistral
+            </h5>
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+                id="mistral_bientot"
+              >
+                Pas de mistral en vue
+              </h5>
+              <p
+                class="card-text"
+                id="prochain_jour"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <footer
+    class="d-flex justify-content-between bg-secondary p-3"
+    id="mainFooter"
+  >
+    Une app pour apprendre React et éviter d'être surpris par le mistral
+  </footer>
 </div>
 `;
