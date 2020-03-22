@@ -1,4 +1,4 @@
-version: '3.2'
+version: '3.7'
 services:
   mistral:
     build: ./
@@ -7,7 +7,7 @@ services:
     networks:
       - frontend
   cypress:
-    image: "cypress/included:3.3.1"
+    image: "cypress/included:4.2.0"
     depends_on:
       - mistral
     environment:
