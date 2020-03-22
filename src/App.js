@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import Demain from './components/Demain.js'
 
 function isMistral(degrees) {
   console.log("is mistral")
@@ -46,16 +47,8 @@ function App() {
 
   return (
     <div className="jumbotron jumbotron-fluid">
-      <div className="container">      
-        <div className="card" style={{"width" : "18rem"}}>
-          <h5 className="card-header">Aix en Provence</h5>
-          <div className="card-body">
-            <h5 className="card-title" id='is_mistral'>{mistral ? "Y'a du mistral" : "Y'a pas de mistral"}</h5>
-            <p className="card-text" id='deg_today'>{windDirection} degrés</p>
-            <h5 className="card-title" id='is_strong'>{strong ? "Ca souffle fort" : "Ca souffle pas fort"}</h5>
-            <p className="card-text" id='speed_today'>{Math.floor(windSpeed * 3600 / 1000)} km/h</p>
-          </div>
-        </div>
+      <div className="container">   
+        <Demain mistral={mistral} windDirection={windDirection} strong={strong} windSpeed={windSpeed} />
       </div>
     </div> 
   );
