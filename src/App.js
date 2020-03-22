@@ -51,10 +51,10 @@ function App() {
     <div className="bg-light p-4">      
       <div className="container">  
         <div className="row">
-          <div className="col py-md-5">
+          <div className="col py-md-5 mb-3">
             <Demain mistral={mistral} windDirection={windDirection} strong={strong} windSpeed={windSpeed} />
           </div>
-          <div className="col py-md-5">
+          <div className="col py-md-5 mb-3">
             <Prochain />
           </div>
         </div> 
