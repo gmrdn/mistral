@@ -29,7 +29,7 @@ function App() {
   const [strong, setIsStrong] = useState(false);
   
   function getForecast() {
-    axios.get('http://api.openweathermap.org/data/2.5/forecast?zip=13100,fr&APPID=f4e38397f380af9bab3b4dc73fab548a')
+    axios.get('https://api.openweathermap.org/data/2.5/forecast?zip=13100,fr&APPID=f4e38397f380af9bab3b4dc73fab548a')
       .then(response => {
         setSpeed(response.data.list[0].wind.speed)
         setDirection(response.data.list[0].wind.deg)
@@ -44,7 +44,7 @@ function App() {
     <div className="jumbotron jumbotron-fluid">
       <div className="container">      
         <div className="card" style={{"width" : "18rem"}}>
-          <h5 class="card-header">Aix en Provence</h5>
+          <h5 className="card-header">Aix en Provence</h5>
           <div className="card-body">
             <h5 className="card-title" id='is_mistral'>{mistral ? "Y'a du mistral" : "Y'a pas de mistral"}</h5>
             <p className="card-text" id='deg_today'>{windDirection} degrés</p>
