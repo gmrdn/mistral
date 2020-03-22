@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     getForecast()
-  })
+  }, [])
   
   function getForecast() {
     axios.get('https://api.openweathermap.org/data/2.5/forecast?zip=13100,fr&APPID=f4e38397f380af9bab3b4dc73fab548a')
