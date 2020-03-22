@@ -5,7 +5,7 @@ import './App.css';
 
 function isMistral(degrees) {
   console.log("is mistral")
-  if (degrees > 90 && degrees < 180) {
+  if (degrees > 280 && degrees < 360) {
     return true
   } else {
     return false
@@ -13,7 +13,7 @@ function isMistral(degrees) {
 }
 
 function isStrong(speed) {
-  if (speed > 25) {
+  if (speed > 5) {
     return true
   } else {
     return false
@@ -49,7 +49,7 @@ function App() {
             <h5 className="card-title" id='is_mistral'>{mistral ? "Y'a du mistral" : "Y'a pas de mistral"}</h5>
             <p className="card-text" id='deg_today'>{windDirection} degrés</p>
             <h5 className="card-title" id='is_strong'>{strong ? "Ca souffle fort" : "Ca souffle pas fort"}</h5>
-            <p className="card-text" id='speed_today'>{windSpeed} km/h</p>
+            <p className="card-text" id='speed_today'>{Math.floor(windSpeed * 3600 / 1000)} km/h</p>
             <button id='btn_forecast' className="btn btn-primary" onClick={() => getForecast()}>Forecast</button>
           </div>
         </div>

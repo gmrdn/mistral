@@ -12,6 +12,11 @@ exports[`Affichage page principale should match snapshot 1`] = `
         class="card"
         style="width: 18rem;"
       >
+        <h5
+          class="card-header"
+        >
+          Aix en Provence
+        </h5>
         <div
           class="card-body"
         >
@@ -41,13 +46,13 @@ exports[`Affichage page principale should match snapshot 1`] = `
             0
              km/h
           </p>
+          <button
+            class="btn btn-primary"
+            id="btn_forecast"
+          >
+            Forecast
+          </button>
         </div>
-        <button
-          class="btn btn-primary"
-          id="btn_forecast"
-        >
-          Forecast
-        </button>
       </div>
     </div>
   </div>
