@@ -26,7 +26,7 @@ exports[`Affichage page principale should match snapshot 1`] = `
             <h5
               class="card-header"
             >
-              Demain
+              Dans les 3 prochaines heures
             </h5>
             <div
               class="card-body"
@@ -42,7 +42,9 @@ exports[`Affichage page principale should match snapshot 1`] = `
                 id="deg_today"
               >
                 0
-                 degrés
+                 degrés (
+                Nord Est
+                )
               </p>
               <h5
                 class="card-title"
@@ -75,16 +77,12 @@ exports[`Affichage page principale should match snapshot 1`] = `
             <div
               class="card-body"
             >
-              <h5
-                class="card-title"
-                id="mistral_bientot"
-              >
-                Pas de mistral en vue
-              </h5>
               <p
                 class="card-text"
                 id="prochain_jour"
-              />
+              >
+                Pas de mistral en vue
+              </p>
             </div>
           </div>
         </div>

@@ -6,7 +6,6 @@ import Demain from './components/Demain.js'
 import Prochain from './components/Prochain.js'
 
 function isMistral(degrees) {
-  console.log("is mistral")
   if (degrees > 280 && degrees < 360) {
     return true
   } else {
@@ -15,20 +14,26 @@ function isMistral(degrees) {
 }
 
 function isStrong(speed) {
-  if (speed > 5) {
+  if (speed > 4.5) {
     return true
   } else {
     return false
   }
 }
 
+const joursDeMistral = (forecast) => {
+  return forecast.data.list.filter(function(jour) {
+    return (isMistral(jour.wind.deg) && isStrong(jour.wind.speed))
+  })
+}
+
+
 function App() {
   const [windDirection, setDirection] = useState(0);
   const [windSpeed, setSpeed] = useState(0);
   const [mistral, setIsMistral] = useState(false);
   const [strong, setIsStrong] = useState(false);
-  const [mistralBientot, setMistralBientot] = useState(false)
-  const [prochainJour, setProchaiNjour] = useState("01/01/1970");
+  const [prochainsJours, setProchainsJours] = useState([]);
 
   useEffect(() => {
     getForecast()
@@ -41,6 +46,7 @@ function App() {
         setDirection(response.data.list[0].wind.deg)
         setIsMistral(isMistral(response.data.list[0].wind.deg))
         setIsStrong(isStrong(response.data.list[0].wind.speed))
+        setProchainsJours(joursDeMistral(response))
       })
   }
 
@@ -55,7 +61,7 @@ function App() {
             <Demain mistral={mistral} windDirection={windDirection} strong={strong} windSpeed={windSpeed} />
           </div>
           <div className="col py-md-5 mb-3">
-            <Prochain />
+            <Prochain prochainsJours={prochainsJours} />
           </div>
         </div> 
       </div>

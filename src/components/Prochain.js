@@ -1,13 +1,17 @@
 import React from 'react'
+import * as moment from 'moment';
+import 'moment/locale/fr';
 
+moment.locale('fr');
 
 const Prochain = (props) => {
     return (
         <div className="card shadow mx-auto" style={{ "width": "18rem" }}>
             <h5 className="card-header">Prochain Mistral</h5>
             <div className="card-body">
-                <h5 className="card-title" id='mistral_bientot'>{props.mistralBientot ? "Mistral bientôt" : "Pas de mistral en vue"}</h5>
-                <p className="card-text" id='prochain_jour'>{props.prochainJour}</p>
+                <p className="card-text" id='prochain_jour'>
+                    {(props.prochainsJours.length > 0) ? moment(props.prochainsJours[0].dt_txt).format('LLLL') : "Pas de mistral en vue"}
+                </p>
             </div>
         </div>
     )
