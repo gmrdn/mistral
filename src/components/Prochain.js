@@ -6,7 +6,7 @@ moment.locale('fr');
 
 const Prochain = (props) => {
     return (
-        <div className="card shadow mx-auto" style={{ "width": "18rem" }}>
+        <div className="card shadow-sm mx-auto" style={{ "width": "20rem" }}>
             <h5 className="card-header">Prochain Mistral</h5>
             <div className="card-body">
                 <p className="card-text" id='prochain_jour'>

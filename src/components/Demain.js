@@ -15,7 +15,7 @@ const getDirection = (degrees) => {
 
 const Demain = (props) => {
     return (
-        <div className="card shadow mx-auto" style={{ "width": "18rem" }}>
+        <div className="card shadow-sm mx-auto" style={{ "width": "20rem" }}>
             <h5 className="card-header">Dans les 3 prochaines heures</h5>
             <div className="card-body">
                 <h5 className="card-title" id='is_mistral'>{props.mistral ? "Y'a du mistral" : "Y'a pas de mistral"}</h5>

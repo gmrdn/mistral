@@ -17,11 +17,11 @@ exports[`Affichage page principale should match snapshot 1`] = `
         class="row"
       >
         <div
-          class="col py-md-5 mb-3"
+          class="col py-md-3 mb-3"
         >
           <div
-            class="card shadow mx-auto"
-            style="width: 18rem;"
+            class="card shadow-sm mx-auto"
+            style="width: 20rem;"
           >
             <h5
               class="card-header"
@@ -63,11 +63,11 @@ exports[`Affichage page principale should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="col py-md-5 mb-3"
+          class="col py-md-3 mb-3"
         >
           <div
-            class="card shadow mx-auto"
-            style="width: 18rem;"
+            class="card shadow-sm mx-auto"
+            style="width: 20rem;"
           >
             <h5
               class="card-header"

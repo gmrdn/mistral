@@ -22,7 +22,7 @@ function isStrong(speed) {
 }
 
 const joursDeMistral = (forecast) => {
-  return forecast.data.list.filter(function(jour) {
+  return forecast.data.list.filter(function (jour) {
     return (isMistral(jour.wind.deg) && isStrong(jour.wind.speed))
   })
 }
@@ -38,7 +38,7 @@ function App() {
   useEffect(() => {
     getForecast()
   }, [])
-  
+
   function getForecast() {
     axios.get('https://api.openweathermap.org/data/2.5/forecast?zip=13100,fr&APPID=f4e38397f380af9bab3b4dc73fab548a')
       .then(response => {
@@ -53,21 +53,21 @@ function App() {
 
   return (
     <>
-    <h1 className="m-3">Gare au mistral !</h1>
-    <div className="bg-light p-4">      
-      <div className="container">  
-        <div className="row">
-          <div className="col py-md-5 mb-3">
-            <Demain mistral={mistral} windDirection={windDirection} strong={strong} windSpeed={windSpeed} />
+      <h1 className="m-3">Gare au mistral !</h1>
+      <div className="bg-light p-4">
+        <div className="container">
+          <div className="row">
+            <div className="col py-md-3 mb-3">
+              <Demain mistral={mistral} windDirection={windDirection} strong={strong} windSpeed={windSpeed} />
+            </div>
+            <div className="col py-md-3 mb-3">
+              <Prochain prochainsJours={prochainsJours} />
+            </div>
           </div>
-          <div className="col py-md-5 mb-3">
-            <Prochain prochainsJours={prochainsJours} />
-          </div>
-        </div> 
+        </div>
       </div>
-    </div> 
-    <footer className="d-flex justify-content-between bg-secondary p-3" id="mainFooter">
-      Une app pour apprendre React et éviter d'être surpris par le mistral
+      <footer className="d-flex justify-content-between bg-secondary p-3" id="mainFooter">
+        Une app pour apprendre React et éviter d'être surpris par le mistral
     </footer>
     </>
   );
