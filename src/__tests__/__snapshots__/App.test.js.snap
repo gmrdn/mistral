@@ -20,45 +20,17 @@ exports[`Affichage page principale should match snapshot 1`] = `
           class="col py-md-3 mb-3"
         >
           <div
-            class="card shadow-sm mx-auto"
-            style="width: 20rem;"
+            class="text-center"
           >
-            <h5
-              class="card-header"
-            >
-              Dans les 3 prochaines heures
-            </h5>
             <div
-              class="card-body"
+              class="spinner-border"
+              role="status"
             >
-              <h5
-                class="card-title"
-                id="is_mistral"
+              <span
+                class="sr-only"
               >
-                Y'a pas de mistral
-              </h5>
-              <p
-                class="card-text"
-                id="deg_today"
-              >
-                0
-                 degrés (
-                Nord Est
-                )
-              </p>
-              <h5
-                class="card-title"
-                id="is_strong"
-              >
-                Ca souffle pas fort
-              </h5>
-              <p
-                class="card-text"
-                id="speed_today"
-              >
-                0
-                 km/h
-              </p>
+                Loading...
+              </span>
             </div>
           </div>
         </div>
@@ -66,23 +38,17 @@ exports[`Affichage page principale should match snapshot 1`] = `
           class="col py-md-3 mb-3"
         >
           <div
-            class="card shadow-sm mx-auto"
-            style="width: 20rem;"
+            class="text-center"
           >
-            <h5
-              class="card-header"
-            >
-              Prochain Mistral
-            </h5>
             <div
-              class="card-body"
+              class="spinner-border"
+              role="status"
             >
-              <p
-                class="card-text"
-                id="prochain_jour"
+              <span
+                class="sr-only"
               >
-                Pas de mistral en vue
-              </p>
+                Loading...
+              </span>
             </div>
           </div>
         </div>
