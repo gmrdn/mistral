@@ -1,24 +1,9 @@
 import React from "react";
 import * as moment from "moment";
 import "moment/locale/fr";
+import { isMistral, isStrong } from "../utils/windUtils";
 
 moment.locale("fr");
-
-const isMistral = degrees => {
-  if (degrees > 280 && degrees < 360) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const isStrong = speed => {
-  if (speed > 4.5) {
-    return true;
-  } else {
-    return false;
-  }
-};
 
 const joursDeMistral = forecast => {
   return forecast.list.filter(function(jour) {
